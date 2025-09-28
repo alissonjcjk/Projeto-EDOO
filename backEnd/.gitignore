@@ -1,0 +1,21 @@
+# C++ build files
+*.o
+*.exe
+*.dll
+*.lib
+*.so
+*.a
+CMakeFiles/
+cmake_install.cmake
+CMakeCache.txt
+Makefile
+compile_commands.json
+build/
+Debug/
+Release/
+x64/
+out/
+# Ignora pastas de build comuns para IDEs
+.vscode/
+.idea/
+cmake-build-*/
