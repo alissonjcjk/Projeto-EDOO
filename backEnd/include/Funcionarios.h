@@ -1,3 +1,4 @@
+#pragma once
 #include "Pessoa.h"
 #include <iostream>
 
@@ -8,6 +9,8 @@ class Funcionarios:public Pessoa{
             float salario;
             int qtdFunfionarios;
         public:
-            
+            Funcionarios(float salario, string funcio, string email);
+            void addFuncionario();
+            float getSalario();
 
 };
