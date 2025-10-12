@@ -14,14 +14,13 @@ class Servico;
 class Agendamento 
 {
 private:
-    int id; // identificador para cada agendamento
+    const int id; // identificador para cada agendamento
     Cliente* cliente;
     Barbeiro* barbeiro;
     Servico* servico;
     string data; // Formato: dia-mes-ano
     string hora; // Formato: hora:minuto
     bool concluido;
-    bool cancelado;
 
 public:
     // construtor
@@ -40,6 +39,8 @@ public:
     void concluir();
     void cancelar();
     void reagendar(const string& novaData, const string& novaHora);
+
+    // exibição
     void exibir() const;
 };
 
