@@ -1,7 +1,7 @@
 #ifndef BARBA_H
 #define BARBA_H
 
-#include <Servico.h>
+// #include <Servico.h>
 #include <string>
 
 using namespace std;
@@ -27,7 +27,6 @@ public:
     void setPreco(float novoPreco);
     void setDescricao(const string& novaDescricao);
 
-}
-
+};
 
 #endif
