@@ -5,10 +5,10 @@ using namespace std;
 
 class Pessoa{
     private:
-        Pessoa(string n, string e);
         string nome;
         string email;
     public:
+        Pessoa(string n, string e) : nome(n), email(e) {};
         string getNome();
         string getEmail(); 
 };
