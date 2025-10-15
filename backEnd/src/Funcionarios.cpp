@@ -4,13 +4,18 @@
 
 using namespace std;
 
-Funcionarios::Funcionarios(float salario, string funcio, string email):Pessoa(funcio,email){
+Funcionarios::Funcionarios(float salario,string funcao, string nome, string email):Pessoa(nome,email){
     this->salario = salario;
     qtdFunfionarios = 0;
+    funcio[qtdFunfionarios].nome = nome;
+    funcio[qtdFunfionarios].funcao = funcao;
 }
 
-void Funcionarios::addFuncionario(){
+//adiciona mais um funcionario
+void Funcionarios::addFuncionario(string nome, string funcao){
     qtdFunfionarios++;
+    funcio[qtdFunfionarios].nome = nome;
+    funcio[qtdFunfionarios].funcao = funcao;
 }
 
 float Funcionarios::getSalario(){

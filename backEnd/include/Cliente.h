@@ -9,10 +9,12 @@ struct historico
     string servico = "";
     int dia = 0;
 };
+//fazer a struct cliente
 
 
 class Cliente:public Pessoa{
         private:
+        //usar cliente como vetor para guardar os clientes
             int contQTDHistorico;
             historico histori[10];
         public:

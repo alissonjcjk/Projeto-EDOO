@@ -1,4 +1,4 @@
 #include "Barbeiro.h"
 #include <iostream>
 
-Barbeiro::Barbeiro(float salario, string prof, string email): Funcionarios(salario,prof,email){};
+Barbeiro::Barbeiro(float salario, string funcao, string nome, string email): Funcionarios(salario,funcao, nome,email){};

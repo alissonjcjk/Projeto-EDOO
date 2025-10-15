@@ -6,5 +6,5 @@ using namespace std;
 
 class Faxineira: public Funcionarios{
     public:
-        Faxineira(float salario, string prof, string email);
+        Faxineira(float salario, string funcao,string nome, string email);
 };
