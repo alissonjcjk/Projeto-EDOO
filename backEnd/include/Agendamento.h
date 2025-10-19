@@ -40,7 +40,7 @@ public:
     // métodos de controle
     void concluir();
     void cancelar();
-    void reagendar(const string& novaData, const string& novaHora);
+    void reagendar(const string& novaData, const string& novaHorarioInicio, const string& novaHorarioFim);
 
     // exibição
     void exibir() const;
