@@ -5,10 +5,12 @@ using namespace std;
 
 class Pessoa{
     private:
+        int id;
         string nome;
         string email;
+        string telefone;
     public:
-        Pessoa(string n, string e);
+        Pessoa(int id, string nome, string email, string telefone);
         string getNome();
         string getEmail(); 
 };

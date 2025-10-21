@@ -5,17 +5,8 @@
 using namespace std;
 
 
-Cliente::Cliente(string nome, string email):Pessoa(nome, email){
-    contQTDHistorico=0;
-};
-
-void Cliente::setHistorico(int dia, string servico){
-    histori[contQTDHistorico].dia = dia;
-    histori[contQTDHistorico].servico = servico;
-    contQTDHistorico++;
+void Cliente::setServicoPreferido(string servico){
+    this->servicoPreferido = servico;
 }
 
-historico* Cliente::getHistorico(){
-    return histori;
-}
  

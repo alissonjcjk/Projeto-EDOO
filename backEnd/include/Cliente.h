@@ -4,22 +4,19 @@
 
 using namespace std;
 
-struct historico
+/// uma struct para guardar o servico agendado e o dia em que foi agendado
+struct agendamento
 {
     string servico = "";
     int dia = 0;
 };
-//fazer a struct cliente
 
 
 class Cliente:public Pessoa{
         private:
-        //usar cliente como vetor para guardar os clientes
-            int contQTDHistorico;
-            historico histori[10];
+            string servicoPreferido;
+            //vetor de agendamentos, caso tenha mais de um servico disponibilizado
+            agendamento agend[10];
         public:
-            Cliente(string nome, string email);
-            void setHistorico(int dia, string servico);
-
-            historico *getHistorico();
+            void setServicoPreferido(string servico);
 };

@@ -1,24 +1,23 @@
 #pragma once
 #include "Pessoa.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
-struct osFuncionarios
-{
-    string nome = "";
-    string funcao = "";
-};
-
 
 class Funcionarios:public Pessoa{
         private:
-            osFuncionarios funcio[10];
             float salario;
-            int qtdFunfionarios;
+            int horarioTrabalhoInicio;
+            int horarioTrabalhoTermino;
+            vector<Funcionarios*> funcionarios;// alocação dinâmica para formar um vetor de funcionarios
         public:
-            Funcionarios(float salario,string funcao, string funcio, string email);
-            void addFuncionario(string nome, string funcao);
+            Funcionarios(int horarioInicio, int horarioFIm, int id, string nome, string email, string telefone);
+            ~Funcionarios();
+            int getHorarioTrabalhoInicial();
+            int getHorarioTrabalhoFinal();
             float getSalario();
-            void setFuncionario();
-            osFuncionarios* getFuncionarios();
+            bool serDemitido(string nome);
+            bool aumentarSalario(float valor, string nome);
+           
 };
