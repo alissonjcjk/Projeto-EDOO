@@ -1,17 +1,22 @@
 #pragma once
 #include "Pessoa.h"
+#include <string>
 #include <vector>
 
+// Qualquer dúvida ler a classe pai
+
 class Cliente : public Pessoa {
-
     private:
-        bool membroClube;
-        vector<string> historicoServicos;
+        vector<string> agendamentos;
+        string servicoPreferido;
+    
     public:
-        Cliente(string n, string e, bool membro=false) :
-        Pessoa(n, e), membroClube(membro) {};
-
-        void setHistorico(string servico);
-        void getHistorico();
+        Cliente(int id, const string& nome, const string& email, const string& telefone, const string& servicoPreferido);
         
+        void setServicoPreferido(const string& servico);
+        
+        string getServicoPreferido() const;
 };
+
+
+
