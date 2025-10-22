@@ -1,4 +1,3 @@
-# C++ build files
 *.o
 *.exe
 *.dll
@@ -15,7 +14,7 @@ Debug/
 Release/
 x64/
 out/
-# Ignora pastas de build comuns para IDEs
+# Ignora pastas de build. Cada um deve gerar seu build localmente
 .vscode/
-.idea/
+.idea/\z
 cmake-build-*/
