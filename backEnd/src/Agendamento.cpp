@@ -1,12 +1,15 @@
 #include "../include/Agendamento.h"
 #include "../include/Cliente.h"
 #include "../include/Barbeiro.h"
-#include "../include/Servico.h"
+//#include "../include/Servico.h"
 
 #include <iostream>
 using namespace std;
 
-// Construtor
+// Construtor 
+// vai ter que fazer um vetor de armazenamento na main. Cada posição será para um cliente e barbeiro ou o mesmo
+//para ver se o barbeiro esta disponivel, terá que percorrer o vetor de agendamento e ver os clientes que foram agendados 
+//com o barbeiro em questao e ver se os horarios nao batem com algum outro que queira agendar
 Agendamento::Agendamento(int id, Cliente* cliente, Barbeiro* barbeiro, Servico* servico, const string& data, const string& horarioInicio, const string& horarioFim)
     : id(id), cliente(cliente), barbeiro(barbeiro), 
     servico(servico), data(data), horarioInicio(horarioInicio), horarioFim(horarioFim), concluido(false) {}
@@ -68,7 +71,7 @@ void Agendamento::exibir() const {
     cout << "Agendamento ID: " << id << endl;
     cout << "Cliente: " << (cliente ? cliente->getNome() : "N/A") << endl;
     cout << "Barbeiro: " << (barbeiro ? barbeiro->getNome() : "N/A") << endl;
-    cout << "Serviço: " << (servico ? servico->getDescricao() : "N/A") << endl;
+    //cout << "Serviço: " << (servico ? servico->getDescricao() : "N/A") << endl;
     cout << "Data: " << data << endl;
     cout << "Hora: " << horarioInicio << endl;
     cout << "Status: " << (concluido ? "Concluído" : "Pendente") << endl;

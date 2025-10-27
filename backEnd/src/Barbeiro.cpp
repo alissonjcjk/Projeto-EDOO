@@ -2,11 +2,7 @@
 #include <iostream>
 using namespace std;
 
-bool Barbeiro::estaDisponivel(int horario){
-    for(int i=0;i<agendamentos.size();i++){
-        if(horario == agendamentos[i].horario){
-            return false;
-        }
-    }
-    return true;
-}
+
+Barbeiro::Barbeiro(int horarioInicio, int horarioFIm, int id, string nome, string email, string telefone):
+Funcionarios(horarioInicio,horarioFIm,id,nome,email,telefone){}
+
