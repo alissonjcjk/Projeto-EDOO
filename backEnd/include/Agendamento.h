@@ -1,6 +1,9 @@
 #ifndef AGENDAMENTO_H
 #define AGENDAMENTO_H
 
+#include "Cliente.h"
+#include "Barbeiro.h"
+#include "Servico.h"
 #include <string>
 #include <iostream>
 
@@ -14,7 +17,7 @@ class Servico;
 class Agendamento 
 {
 private:
-    const int id; // identificador para cada agendamento
+    int id; // identificador para cada agendamento
     Cliente* cliente;
     Barbeiro* barbeiro;
     Servico* servico;
@@ -25,9 +28,9 @@ private:
 
 public:
     // construtor
-    Agendamento(int id, Cliente* cliente, Barbeiro* barbeiro, Servico* servico, const string& data, const string& horarioInicio, const string& horarioFim);
 
     // métodos de acesso
+    void setAgendamento(int i, Cliente* cli, Barbeiro* bar, Servico* serv, const string& d, const string& horarioI, const string& horarioF);
     int getId() const;
     Cliente* getCliente() const;
     Barbeiro* getBarbeiro() const;

@@ -1,7 +1,7 @@
 #include "../include/Agendamento.h"
 #include "../include/Cliente.h"
 #include "../include/Barbeiro.h"
-//#include "../include/Servico.h"
+#include "../include/Servico.h"
 
 #include <iostream>
 using namespace std;
@@ -10,11 +10,17 @@ using namespace std;
 // vai ter que fazer um vetor de armazenamento na main. Cada posição será para um cliente e barbeiro ou o mesmo
 //para ver se o barbeiro esta disponivel, terá que percorrer o vetor de agendamento e ver os clientes que foram agendados 
 //com o barbeiro em questao e ver se os horarios nao batem com algum outro que queira agendar
-Agendamento::Agendamento(int id, Cliente* cliente, Barbeiro* barbeiro, Servico* servico, const string& data, const string& horarioInicio, const string& horarioFim)
-    : id(id), cliente(cliente), barbeiro(barbeiro), 
-    servico(servico), data(data), horarioInicio(horarioInicio), horarioFim(horarioFim), concluido(false) {}
-
 // MÉTODOS DE ACESSO
+void Agendamento::setAgendamento(int i, Cliente* cli, Barbeiro* bar, Servico* serv, const string& d, const string& horarioI, const string& horarioF){
+    id = i;
+    cliente = cli;
+    barbeiro = bar;
+    servico = serv;
+    data = d;
+    horarioInicio = horarioI;
+    horarioFim = horarioF;
+}
+
 int Agendamento::getId() const {
     return id;
 }
