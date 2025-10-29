@@ -6,6 +6,11 @@
 #include <iostream>
 using namespace std;
 
+
+// Construtr padrão
+Agendamento::Agendamento()
+    : id(0), cliente(nullptr), barbeiro(nullptr), servico(nullptr), data(""), horarioInicio(""), horarioFim(""), concluido(false) {}
+
 // Construtor
 Agendamento::Agendamento(int id, Cliente* cliente, Barbeiro* barbeiro, Servico* servico, const string& data, const string& horarioInicio, const string& horarioFim)
     : id(id), cliente(cliente), barbeiro(barbeiro), 
@@ -73,3 +78,33 @@ void Agendamento::exibir() const {
     cout << "Hora: " << horarioInicio << endl;
     cout << "Status: " << (concluido ? "Concluído" : "Pendente") << endl;
 }
+
+// SETS
+void Agendamento::setId(int novoId) {
+    id = novoId;
+}
+
+void Agendamento::setCliente(Cliente* c) {
+    cliente = c;
+}
+
+void Agendamento::setBarbeiro(Barbeiro* b) {
+    barbeiro = b;
+}
+
+void Agendamento::setServico(Servico* s) {
+    servico = s;
+}
+
+void Agendamento::setData(const string& novaData) {
+    data = novaData;
+}
+
+void Agendamento::setHorarioInicio(const string& novoHorarioInicio) {
+    horarioInicio = novoHorarioInicio;
+}
+
+void Agendamento::setHorarioFim(const string& novoHorarioFim) {
+    horarioFim = novoHorarioFim;
+}
+
