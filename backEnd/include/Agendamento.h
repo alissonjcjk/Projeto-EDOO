@@ -1,5 +1,4 @@
-#ifndef AGENDAMENTO_H
-#define AGENDAMENTO_H
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -14,7 +13,7 @@ class Servico;
 class Agendamento 
 {
 private:
-    const int id; // identificador para cada agendamento
+    int id; // identificador para cada agendamento
     Cliente* cliente;
     Barbeiro* barbeiro;
     Servico* servico;
@@ -25,6 +24,7 @@ private:
 
 public:
     // construtor
+    Agendamento();
     Agendamento(int id, Cliente* cliente, Barbeiro* barbeiro, Servico* servico, const string& data, const string& horarioInicio, const string& horarioFim);
 
     // métodos de acesso
@@ -42,8 +42,15 @@ public:
     void cancelar();
     void reagendar(const string& novaData, const string& novaHorarioInicio, const string& novaHorarioFim);
 
+    // sets
+    void setId(int novoId);
+    void setCliente(Cliente* c);
+    void setBarbeiro(Barbeiro* b);
+    void setServico(Servico* s);
+    void setData(const string& novaData);
+    void setHorarioInicio(const string& novoHorarioInicio);
+    void setHorarioFim(const string& novoHorarioFim);
+
     // exibição
     void exibir() const;
 };
-
-#endif
