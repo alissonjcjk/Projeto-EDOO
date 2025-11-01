@@ -1,5 +1,6 @@
-#ifndef AGENDAMENTO_H
-#define AGENDAMENTO_H
+// #ifndef AGENDAMENTO_H
+// #define AGENDAMENTO_H
+#pragma once
 
 #include "Cliente.h"
 #include "Barbeiro.h"
@@ -49,4 +50,4 @@ public:
     void exibir() const;
 };
 
-#endif
+// #endif
