@@ -1,8 +1,11 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+/* quando o item da nav estiver ativo, torna a imagem branca */
+.nav-item-active .nav-icon {
+  filter: brightness(0) invert(1);
 }
 
 .logo {
