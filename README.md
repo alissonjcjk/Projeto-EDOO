@@ -1,5 +1,9 @@
 # Projeto-EDOO
 Sistema de barbearia - React TS + Tailwind (Frontend) e C++ OOP (Backend)
+
+
+
+
 Para rodar o Frontend:
 tenha o Node instalado com NPM
 navegue até a pasta "frontend"
