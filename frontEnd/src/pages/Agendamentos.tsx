@@ -1,8 +1,9 @@
+import { useState } from 'react'
+import Modal from '../components/modal/Modal'
+import AgendamentoForm from '../components/modal/AgendamentoForm'
+
 export default function AgendamentosPage() {
-	const openNovoAgendamento = () => {
-		// TODO: abrir modal de novo agendamento
-		console.log('Abrir modal: Novo Agendamento')
-	}
+	const [open, setOpen] = useState(false)
 
 	return (
 		<div className="p-6">
@@ -14,7 +15,7 @@ export default function AgendamentosPage() {
 
 				<div>
 					<button
-						onClick={openNovoAgendamento}
+						onClick={() => setOpen(true)}
 						className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded shadow"
 						aria-label="Novo Agendamento"
 					>
@@ -22,6 +23,10 @@ export default function AgendamentosPage() {
 					</button>
 				</div>
 			</div>
+
+			<Modal isOpen={open} onClose={() => setOpen(false)} title="Novo Agendamento">
+				<AgendamentoForm onCancel={() => setOpen(false)} onSave={() => setOpen(false)} />
+			</Modal>
 
 			{/* conteúdo da página vai aqui */}
 		</div>

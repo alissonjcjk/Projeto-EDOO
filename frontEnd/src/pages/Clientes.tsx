@@ -1,8 +1,9 @@
+import { useState } from 'react'
+import Modal from '../components/modal/Modal'
+import ClienteForm from '../components/modal/ClienteForm'
+
 export default function ClientesPage() {
-	const openNovoCliente = () => {
-		// TODO: abrir modal de novo cliente
-		console.log('Abrir modal: Novo Cliente')
-	}
+	const [open, setOpen] = useState(false)
 
 	return (
 		<div className="p-6">
@@ -14,7 +15,7 @@ export default function ClientesPage() {
 
 				<div>
 					<button
-						onClick={openNovoCliente}
+						onClick={() => setOpen(true)}
 						className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded shadow"
 						aria-label="Novo Cliente"
 					>
@@ -22,6 +23,10 @@ export default function ClientesPage() {
 					</button>
 				</div>
 			</div>
+
+			<Modal isOpen={open} onClose={() => setOpen(false)} title="Novo Cliente">
+				<ClienteForm onCancel={() => setOpen(false)} onSave={() => setOpen(false)} />
+			</Modal>
 
 			{/* conteúdo da página vai aqui */}
 		</div>

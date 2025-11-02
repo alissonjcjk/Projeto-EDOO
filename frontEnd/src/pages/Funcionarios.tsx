@@ -1,8 +1,9 @@
+import { useState } from 'react'
+import Modal from '../components/modal/Modal'
+import FuncionariosForm from '../components/modal/FuncionarioForm'
+
 export default function FuncionariosPage() {
-	const openNovoFuncionario = () => {
-		// TODO: abrir modal de novo funcionário
-		console.log('Abrir modal: Novo Funcionário')
-	}
+	const [open, setOpen] = useState(false)
 
 	return (
 		<div className="p-6">
@@ -14,7 +15,7 @@ export default function FuncionariosPage() {
 
 				<div>
 					<button
-						onClick={openNovoFuncionario}
+						onClick={() => setOpen(true)}
 						className="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded shadow"
 						aria-label="Novo Funcionário"
 					>
@@ -22,6 +23,10 @@ export default function FuncionariosPage() {
 					</button>
 				</div>
 			</div>
+
+			<Modal isOpen={open} onClose={() => setOpen(false)} title="Novo Funcionário">
+				<FuncionariosForm onCancel={() => setOpen(false)} onSave={() => setOpen(false)} />
+			</Modal>
 
 			{/* conteúdo da página vai aqui */}
 		</div>
