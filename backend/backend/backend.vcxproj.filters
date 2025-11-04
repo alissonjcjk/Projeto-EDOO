@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Arquivos de Origem">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Cabeçalho">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Arquivos de Recurso">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="modelos">
+      <UniqueIdentifier>{afa2c770-7f9f-438e-84b1-1e8b40ad3e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="repositorios">
+      <UniqueIdentifier>{17fae30a-ff0e-4cbe-b775-3d25bca1371a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="servicos">
+      <UniqueIdentifier>{8a79080a-4f10-45b9-9dfe-d91da94026c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{03bc4e1f-df85-4e27-91c2-82661728c8eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="controladores">
+      <UniqueIdentifier>{d5b5976d-f587-4f8f-8678-26e604fdc681}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="backend.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\..\OneDrive\Documentos\sqlite-amalgamation-3500400\sqlite3.c">
+      <Filter>Arquivos de Recurso</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="ApiServer.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+    <ClCompile Include="modelos\Barbeiro.cpp">
+      <Filter>modelos</Filter>
+    </ClCompile>
+    <ClCompile Include="modelos\Cliente.cpp">
+      <Filter>modelos</Filter>
+    </ClCompile>
+    <ClCompile Include="modelos\Funcionario.cpp">
+      <Filter>modelos</Filter>
+    </ClCompile>
+    <ClCompile Include="modelos\Gestor.cpp">
+      <Filter>modelos</Filter>
+    </ClCompile>
+    <ClCompile Include="modelos\Pessoa.cpp">
+      <Filter>modelos</Filter>
+    </ClCompile>
+    <ClCompile Include="modelos\Servico.cpp">
+      <Filter>modelos</Filter>
+    </ClCompile>
+    <ClCompile Include="repositorios\BarbeiroRepositorio.cpp">
+      <Filter>repositorios</Filter>
+    </ClCompile>
+    <ClCompile Include="servicos\BarbeiroServico.cpp">
+      <Filter>servicos</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\EmailUtils.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="controladores\BarbeiroControlador.cpp">
+      <Filter>controladores</Filter>
+    </ClCompile>
+    <ClCompile Include="repositorios\GestorRepositorio.cpp">
+      <Filter>repositorios</Filter>
+    </ClCompile>
+    <ClCompile Include="servicos\GestorServico.cpp">
+      <Filter>servicos</Filter>
+    </ClCompile>
+    <ClCompile Include="controladores\GestorControlador.cpp">
+      <Filter>controladores</Filter>
+    </ClCompile>
+    <ClCompile Include="repositorios\ClienteRepositorio.cpp">
+      <Filter>repositorios</Filter>
+    </ClCompile>
+    <ClCompile Include="servicos\ClienteServico.cpp">
+      <Filter>servicos</Filter>
+    </ClCompile>
+    <ClCompile Include="controladores\ClienteControlador.cpp">
+      <Filter>controladores</Filter>
+    </ClCompile>
+    <ClCompile Include="repositorios\ServicoRepositorio.cpp">
+      <Filter>repositorios</Filter>
+    </ClCompile>
+    <ClCompile Include="controladores\ServicoControlador.cpp">
+      <Filter>controladores</Filter>
+    </ClCompile>
+    <ClCompile Include="servicos\ServicoServico.cpp">
+      <Filter>servicos</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Database.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="ApiServer.h">
+      <Filter>Arquivos de Cabeçalho</Filter>
+    </ClInclude>
+    <ClInclude Include="modelos\Agendamento.h">
+      <Filter>modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="modelos\Barbeiro.h">
+      <Filter>modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="modelos\Cliente.h">
+      <Filter>modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="modelos\Funcionario.h">
+      <Filter>modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="modelos\Gestor.h">
+      <Filter>modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="modelos\Pessoa.h">
+      <Filter>modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="modelos\Servico.h">
+      <Filter>modelos</Filter>
+    </ClInclude>
+    <ClInclude Include="repositorios\BarbeiroRepositorio.h">
+      <Filter>repositorios</Filter>
+    </ClInclude>
+    <ClInclude Include="servicos\BarbeiroServico.h">
+      <Filter>servicos</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\EmailUtils.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="controladores\BarbeiroControlador.h">
+      <Filter>controladores</Filter>
+    </ClInclude>
+    <ClInclude Include="repositorios\GestorRepositorio.h">
+      <Filter>repositorios</Filter>
+    </ClInclude>
+    <ClInclude Include="servicos\GestorServico.h">
+      <Filter>servicos</Filter>
+    </ClInclude>
+    <ClInclude Include="controladores\GestorControlador.h">
+      <Filter>controladores</Filter>
+    </ClInclude>
+    <ClInclude Include="repositorios\ClienteRepositorio.h">
+      <Filter>repositorios</Filter>
+    </ClInclude>
+    <ClInclude Include="servicos\ClienteServico.h">
+      <Filter>servicos</Filter>
+    </ClInclude>
+    <ClInclude Include="controladores\ClienteControlador.h">
+      <Filter>controladores</Filter>
+    </ClInclude>
+    <ClInclude Include="repositorios\ServicoRepositorio.h">
+      <Filter>repositorios</Filter>
+    </ClInclude>
+    <ClInclude Include="controladores\ServicoControlador.h">
+      <Filter>controladores</Filter>
+    </ClInclude>
+    <ClInclude Include="servicos\ServicoServico.h">
+      <Filter>servicos</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
