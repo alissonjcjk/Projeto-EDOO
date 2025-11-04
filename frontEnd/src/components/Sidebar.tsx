@@ -2,6 +2,7 @@ import logo from '../assets/SC.png'
 import calIcon from '../assets/calendario.png'
 import funcIcon from '../assets/funcionarios.png'
 import clientIcon from '../assets/cliente.png'
+
 import type { ReactNode } from 'react'
 
 type Props = {
@@ -35,6 +36,12 @@ export default function Sidebar({ activePath, onNavigate }: Props) {
             path: '/clientes',
             label: 'Clientes',
             icon: <img src={clientIcon} alt="clientes" className="w-5 h-5 object-contain nav-icon" />,
+        },
+        {
+            key: 'servicos',
+            path: '/servicos',
+            label: 'Serviços',
+            icon: null,
         },
     ]
 
@@ -78,6 +85,9 @@ export default function Sidebar({ activePath, onNavigate }: Props) {
                         </a>
                     )
                 })}
+
+        
+            
             </nav>
 
             <div className="border-t border-gray-200 mt-auto py-6">
@@ -86,8 +96,10 @@ export default function Sidebar({ activePath, onNavigate }: Props) {
                         <h1 className="text-sm font-medium text-gray-800">Painel do Gerente</h1>
                         <p className="text-xs text-gray-400">v1.0.0</p>
                     </div>
+
                 </div>
             </div>
+            
         </aside>
     )
 }
