@@ -12,3 +12,19 @@ void Servico::setServico(string nome, float preco, int duracao){
     this->preco = preco;
     this->duracao = duracao;
 }
+
+int Servico::getId() const{
+    return id;
+}
+
+string Servico::getNome() const{
+    return nome;
+}
+
+double Servico::getPreco() const{
+    return preco;
+}
+
+int Servico::getDuracao() const{
+    return duracao;
+}

@@ -7,10 +7,13 @@
 using namespace std;
 
 
-Barbeiro::Barbeiro(int horarioInicio, int horarioFIm, int id, string nome, string email, string telefone):
-Funcionarios(horarioInicio,horarioFIm,id,nome,email,telefone){}
+Barbeiro::Barbeiro(int horarioInicio, int horarioFIm, int id, string nome, string email, string telefone, string especialidade):
+Funcionarios(horarioInicio,horarioFIm,id,nome,email,telefone){
+    this->especialidade = especialidade;
+}
 
-// void Barbeiro::setAgendamento(int id, Cliente* cliente, Barbeiro* barbeiro, Servico* servico, const string& data, const string& horarioInicio, const string& horarioFim){
-//     agendamento->setAgendamento(id,cliente,barbeiro,servico,data,horarioInicio,horarioFim);
-// }
+string Barbeiro::getEspecialidade() const{
+    return especialidade;
+}
+
 
