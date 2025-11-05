@@ -71,9 +71,14 @@ export default function AgendamentosPage() {
 
   return (
     <div className="p-6">
-      <div className="mb-8">
-        <h1 className="text-3xl font-semibold mb-2">Agendamentos</h1>
-        <p className="text-xl text-gray-600">Gerencie todos os agendamentos da barbearia</p>
+      <div className="mb-8 flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-semibold mb-2">Agendamentos</h1>
+          <p className="text-xl text-gray-600">Gerencie todos os agendamentos da barbearia</p>
+        </div>
+        <div>
+          <button onClick={() => setOpen(true)} className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition duration-200 font-semibold" aria-label="Novo Agendamento">+ Novo Agendamento</button>
+        </div>
       </div>
 
       <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -133,16 +138,7 @@ export default function AgendamentosPage() {
           </table>
         </div>
 
-        <div className="border-t border-gray-200 px-6 py-4 bg-gray-50">
-          <button 
-            onClick={() => setOpen(true)}
-            className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition duration-200 font-semibold"
-            aria-label="Novo Agendamento"
-
-          >
-            + Novo Agendamento
-          </button>
-        </div>
+        
       </div>
        <Modal isOpen={open} onClose={() => setOpen(false)} title="Novo Agendamento">
 			<AgendamentoForm onCancel={() => setOpen(false)} onSave={() => setOpen(false)} />
