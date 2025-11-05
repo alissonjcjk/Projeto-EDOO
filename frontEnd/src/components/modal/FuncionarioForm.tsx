@@ -8,6 +8,8 @@ interface Props {
 
 export default function FuncionariosForm({ onCancel, onSave }: Props) {
   const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [telefone, setTelefone] = useState('')
   const [role, setRole] = useState('')
   const [startTime, setStartTime] = useState('')
   const [endTime, setEndTime] = useState('')
@@ -20,7 +22,7 @@ export default function FuncionariosForm({ onCancel, onSave }: Props) {
     setSaving(true)
     setError(null)
     try {
-      const created = await api.createBarber({ name, role, startTime, endTime, salary: Number(salary) })
+  const created = await api.createBarber({ name, email, telefone, role, startTime, endTime, salary: Number(salary) })
       onSave(created)
     } catch (err) {
       console.error(err)
@@ -36,6 +38,16 @@ export default function FuncionariosForm({ onCancel, onSave }: Props) {
       <div>
         <label className="block text-sm font-medium">Nome</label>
         <input value={name} onChange={(e) => setName(e.target.value)} className="mt-1 w-full rounded border p-2 bg-gray-50" placeholder="Digite o nome do funcionário" />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium">Email</label>
+        <input value={email} onChange={(e) => setEmail(e.target.value)} className="mt-1 w-full rounded border p-2 bg-gray-50" placeholder="email@exemplo.com" />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium">Contato</label>
+        <input value={telefone} onChange={(e) => setTelefone(e.target.value)} className="mt-1 w-full rounded border p-2 bg-gray-50" placeholder="(99) 99999-9999" />
       </div>
 
       <div>
