@@ -13,8 +13,7 @@ npm run dev
 
 
 Para rodar o backend:
-tenha o cmake instalado,
+é necessário usar o Visual Studio 2019,
 navegue até o diretório "backEnd",
-execute o que esta entre (): (mkdir build), 
-(cd build), (cmake ..), (make), (./backend)
+o projeto usa SQLite e cpprestsdk
 
