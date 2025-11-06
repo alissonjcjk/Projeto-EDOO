@@ -19,7 +19,11 @@ export default function ClienteForm({ onCancel, onSave }: Props) {
     setSaving(true)
     setError(null)
     try {
-      const created = await api.createClient({ name, email, phone ,servicoPreferido})
+      const created = await api.createClient({ 
+      name: name, 
+      email: email, 
+      phone: phone ,
+      servicoPreferido: servicoPreferido})
       onSave(created)
     } catch (err) {
       console.error(err)

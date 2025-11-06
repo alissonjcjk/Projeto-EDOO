@@ -20,7 +20,8 @@ export default function FuncionariosForm({ onCancel, onSave }: Props) {
     setSaving(true)
     setError(null)
     try {
-      const created = await api.createBarber({ name, role, startTime, endTime, salary: Number(salary) })
+      //ageitando barbeiro
+      const created = await api.createBarber({ nome, role, startTime, endTime, salary: Number(salary) })
       onSave(created)
     } catch (err) {
       console.error(err)

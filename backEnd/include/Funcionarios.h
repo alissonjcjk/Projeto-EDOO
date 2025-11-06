@@ -12,8 +12,8 @@ class Funcionarios:public Pessoa{
             int horarioTrabalhoTermino;
         public:
             Funcionarios(int horarioInicio, int horarioFIm, int id, string nome, string email, string telefone);
-            int getHorarioTrabalhoInicial();
-            int getHorarioTrabalhoFinal();
-            float getSalario();
+            int getHorarioTrabalhoInicial() const;
+            int getHorarioTrabalhoFinal() const;
+            float getSalario() const;
            
 };

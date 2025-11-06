@@ -26,10 +26,11 @@ export const api = {
   },
 
   async createBarber(barberData: { 
-    name: string; 
-    role: string; 
-    startTime: string; 
-    endTime: string; 
+    nome: string; 
+    email: string;
+    contato: string; 
+    horarioTrabalhoInicial: number; 
+    horarioTrabalhoFinal: number; 
     salary: number 
   }) {
     const response = await fetch(`${API_BASE_URL}/barbers`, {
@@ -38,10 +39,12 @@ export const api = {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name: barberData.name,
-        email: "", // Adaptar conforme necessário
-        phone: "", // Adaptar conforme necessário
-        specialty: barberData.role
+        name: barberData.nome,
+        email: barberData.email,
+        phone: barberData.contato,
+        horarioTrabalhoInicial: barberData.horarioTrabalhoInicial,
+        horarioTrabalhoFinal: barberData.horarioTrabalhoFinal,
+        specialty: barberData.contato
       }),
     });
     return await response.json();

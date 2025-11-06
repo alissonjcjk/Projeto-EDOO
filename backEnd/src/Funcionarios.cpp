@@ -11,14 +11,14 @@ Funcionarios::Funcionarios(int horarioInicio, int horarioFin, int id, string nom
 }
 
 
-int Funcionarios::getHorarioTrabalhoFinal(){
+int Funcionarios::getHorarioTrabalhoFinal() const{
     return horarioTrabalhoTermino;
 }
 
-int Funcionarios::getHorarioTrabalhoInicial(){
+int Funcionarios::getHorarioTrabalhoInicial() const{
     return horarioTrabalhoInicio;
 }
 
-float Funcionarios::getSalario(){
+float Funcionarios::getSalario() const{
     return salario;
 }

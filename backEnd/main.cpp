@@ -11,6 +11,7 @@
 #include "httplib.h"
 #include "json.hpp"
 
+
 using namespace std;
 using json = nlohmann::json;
 using namespace httplib;
@@ -33,9 +34,9 @@ json barbeiroToJson(const Barbeiro& barbeiro) {
         {"email", barbeiro.getEmail()},
         {"phone", barbeiro.getTelefone()},
         {"specialty", barbeiro.getEspecialidade()},
-        {"startTime", "09:00"},
-        {"endTime", "18:00"},
-        {"salary", "R$ 3300,00"}
+        {"startTime", to_string(barbeiro.getHorarioTrabalhoInicial())},
+        {"endTime", to_string(barbeiro.getHorarioTrabalhoFinal())},
+        {"salary", barbeiro.getSalario()}
     };
 }
 
@@ -110,9 +111,9 @@ int main() {
             string nome = body["name"];
             string email = body["email"];
             string telefone = body["phone"];
-            string servicoPrefe = body.value("preferredService", "");
+            string servicoPreferido = body.value("servicoPreferido", "");
             
-            Cliente novoCliente(idAgendamentoCliente, nome, email, telefone, servicoPrefe);
+            Cliente novoCliente(idAgendamentoCliente, nome, email, telefone, servicoPreferido);
             clientes.push_back(novoCliente);
             idAgendamentoCliente++;
             
@@ -147,9 +148,11 @@ int main() {
             string nome = body["name"];
             string email = body["email"];
             string telefone = body["phone"];
+            int horarioTrabalhoInicio = body["horarioTrabalhoInicio"];
+            int horarioTrabalhoFinal = body["horarioTrabalhoFinal"];
             string especialidade = body["specialty"];
             
-            Barbeiro novoBarbeiro(6, 20, idAgendamentoBarbeiro, nome, email, telefone, especialidade);
+            Barbeiro novoBarbeiro(horarioTrabalhoInicio,horarioTrabalhoFinal, idAgendamentoBarbeiro, nome, email, telefone, especialidade);
             barbeiros.push_back(novoBarbeiro);
             idAgendamentoBarbeiro++;
             
