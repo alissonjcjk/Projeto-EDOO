@@ -90,9 +90,6 @@ int main() {
 
     Server svr;
 
-    // REMOVA esta linha que causa duplicação:
-    // svr.set_default_headers({...});
-
     // Rota para obter clientes
     svr.Get("/api/clients", [&](const Request& req, Response& res) {
         set_cors_headers(res);

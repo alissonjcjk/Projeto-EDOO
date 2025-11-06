@@ -10,6 +10,7 @@ export default function ClienteForm({ onCancel, onSave }: Props) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')
+  const [servicoPreferido, setServicoPreferido] = useState('')
   const [saving, setSaving] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -18,7 +19,7 @@ export default function ClienteForm({ onCancel, onSave }: Props) {
     setSaving(true)
     setError(null)
     try {
-      const created = await api.createClient({ name, email, phone })
+      const created = await api.createClient({ name, email, phone ,servicoPreferido})
       onSave(created)
     } catch (err) {
       console.error(err)
@@ -44,6 +45,11 @@ export default function ClienteForm({ onCancel, onSave }: Props) {
       <div>
         <label className="block text-sm font-medium">Telefone</label>
         <input value={phone} onChange={(e) => setPhone(e.target.value)} className="mt-1 w-full rounded border p-2 bg-gray-50" placeholder="(11) 98765-4321" />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium">servico preferido</label>
+        <input value={servicoPreferido} onChange={(e) => setServicoPreferido(e.target.value)} className="mt-1 w-full rounded border p-2 bg-gray-50" placeholder="barba" />
       </div>
 
       <div className="flex justify-end gap-3 pt-2">

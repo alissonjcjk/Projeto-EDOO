@@ -8,7 +8,7 @@ export const api = {
     return await response.json();
   },
 
-  async createClient(clientData: { name: string; email: string; phone: string }) {
+  async createClient(clientData: { name: string; email: string; phone: string ; servicoPreferido: string}) {
     const response = await fetch(`${API_BASE_URL}/clients`, {
       method: 'POST',
       headers: {
