@@ -16,5 +16,5 @@ Para rodar o backend:
 tenha o cmake instalado,
 navegue até o diretório "backEnd",
 execute o que esta entre (): (mkdir build), 
-(cd build), (cmake ..), (make), (./backend)
+(cd build), (cmake ..), (make), (./backend).
 
